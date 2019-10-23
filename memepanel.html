@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>edit your meme</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="initMem()">
+
+    <header class="header flex space-between">
+        <div> Wellcome to my meme</div>
+        <nav>
+            <ul class="nav-bar clean-list flex ">
+                <li class="nav-bar">gallery</li>
+                <li class="nav-bar">about</li>
+            </ul>
+        </nav>
+    </header>
+    <section class="main-container flex align-center ">
+        <canvas class="canvas flex align-center" id="canvas" width="200" height="200"></canvas>
+        <section class="controls">
+            <table>
+                
+                <tr>
+                    <td>
+                            <input class="controls__input" id="name" type="text" onkeypress="drawText()" placeholder="Enter Text"/>
+                            <label class="controls__label" for="name">Overlay Text</label>
+                    </td>
+                </tr>
+            </table>
+    
+        </section>
+    </section>
+
+
+    <script src="js/service.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/meme-service.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

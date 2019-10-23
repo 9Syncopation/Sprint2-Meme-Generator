@@ -1,0 +1,51 @@
+
+
+header{   
+
+  height: 66px;
+  background-color: #ff7f00;
+}
+
+.nav-bar{
+    margin-right: 5px;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gallery img {
+    width:150px;
+    height:150px;
+    margin: 5px;
+}
+
+
+
+#canvas{
+    border: 3px solid blueviolet;
+    flex-direction: row;
+}
+
+
+
+/* ///////////////*****helpers *******/
+.flex{
+    display: flex;
+}
+
+.align-center{
+    align-content: center;
+
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.clean-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
