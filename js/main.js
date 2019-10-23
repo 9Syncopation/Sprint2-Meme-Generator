@@ -36,11 +36,12 @@ function drawImgInCanvas(currId){
    
     let img = new Image()
     img.src = imgId
-   
+   img.onload = ()=>{
+
+       gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height)
+   }
     // console.log(typeof(img));
     
-    gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height)
-
 }
 
  

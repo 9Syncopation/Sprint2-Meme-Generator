@@ -21,18 +21,65 @@
         </nav>
     </header>
     <section class="main-container flex align-center ">
-        <canvas class="canvas flex align-center" id="canvas" width="200" height="200"></canvas>
+        <canvas class="canvas flex align-center" id="canvas" width="300" height="300"></canvas>
         <section class="controls">
             <table>
-                
                 <tr>
                     <td>
-                            <input class="controls__input" id="name" type="text" onkeypress="drawText()" placeholder="Enter Text"/>
-                            <label class="controls__label" for="name">Overlay Text</label>
+                        <label class="controls__label" for="name">Text Input</label>
+                    </td>
+                    <td>
+                            <input class="controls__input" id="name" type="text" onkeypress="drawText()"
+                                placeholder="Enter Text" />
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <img src="img/add.png" alt="" class="label" onclick="onAddLine()" >
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td>
+                        <img src="img/paint-board.png" class="label" alt="">
+                        <label for="font-color"  ></label>  Choose your favorite color:</label>
+                    </td>
+                    <td>
+                        <input type="color" id="font-color" name="font-color" />
+                    </td>
+                    <tr>
+                    <td>
+                            <img src="img/text-size.PNG" class="label" alt="">
+                            <label for="txt"  ></label> Text Size</label>
+                    </td>
+                        <td>
+                            <input min="6" max="44" step="1" value="16" type="range" id="txt" name="txt"
+                            onchange="showTxtSize(this.value);">
+                            </td>
+                    </tr>
+                    <tr>
+                    <td>
+                            <img src="img/up-down.png" class="label" alt="">
+                            <label for="line"  ></label> Line Position</label>
+                    </td>
+                        <td>
+                            <input min="0" max="150" value="30" type="range" id="line" name="line"
+                            onchange="changeLinePos(this.value);">
+                            </td>
+                    </tr>
+                    <td>
+                            <img src="img/text-stroke.png" class="label" alt="">
+                            <label for="txtStroke"  ></label> Text stroke</label>
+                    </td>
+                        <td>
+                            <input type="color" id="txtStroke" name="txtStroke"
+                            onchange="fillText(this.value);">
+                            </td>
+                    </tr>
+                                      
+                </tr>
             </table>
-    
+
         </section>
     </section>
 

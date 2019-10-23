@@ -49,3 +49,8 @@ header{
     padding: 0;
     list-style-type: none;
 }
+
+.label{
+    height: 35px;
+    width: 35px;
+}
