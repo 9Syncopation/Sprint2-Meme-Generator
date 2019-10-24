@@ -1,46 +1,66 @@
-
-
-header{   
-
-  height: 66px;
-  background-color: #ff7f00;
+body {
+    margin: 0;
 }
 
-.nav-bar{
+.nav-bar {
     margin-right: 5px;
 }
 
-.gallery{
+.key-words {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .gallery img {
-    width:150px;
-    height:150px;
-    margin: 5px;
+    margin: 15px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+    width: 150px;
+    height: 150px;
 }
 
+.gallery img:hover {
+    transform: scale(1.1);
+}
 
-
-#canvas{
+#canvas {
     border: 3px solid blueviolet;
     flex-direction: row;
+    width: 100%;
+    flex: 1;
 }
 
-
+.btn {
+    width: 60px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    flex-direction: column;
+    display: inline-flex;
+    /* padding: 10px; */
+    border-radius: 12px;
+    background-color: #ffffff
+}
 
 /* ///////////////*****helpers *******/
-.flex{
+
+.flex {
     display: flex;
 }
 
-.align-center{
+.align-center {
     align-content: center;
-
 }
 
-.space-between{
+.space-between {
     justify-content: space-between;
 }
 
@@ -50,7 +70,85 @@ header{
     list-style-type: none;
 }
 
-.label{
+.label {
     height: 35px;
     width: 35px;
+}
+
+#font-color {
+    display: none;
+}
+
+#txtStroke {
+    display: none;
+}
+
+.controls {
+    background-color: #e3e3e3;
+    flex: 1;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+}
+
+.navigation a {
+    color: white;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-decoration: none;
+    background: rgb(238, 159, 13);
+    padding: 20px 5px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.navigation a:hover {
+    background: rgba(238, 159, 13, 0.9);
+}
+
+.navigation ul {
+    border: 1px solid rgb(255, 187, 0);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navigation li {
+    flex: 3;
+}
+
+.navigation .user {
+    flex: 1;
+}
+
+.main-container {
+    flex-direction: row;
+}
+
+@media all and (max-width: 1000px) {
+    .navigation ul {
+        flex-wrap: wrap;
+    }
+    .navigation li {
+        flex: 1 1 50%;
+    }
+    .navigation .user {
+        flex: 1 1 33.33%;
+    }
+    .main-container {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .navigation li {
+        flex-basis: 100%;
+    }
+    .navigation .user {
+        flex-basis: 50%;
+    }
+    .key-words {
+        flex-wrap: wrap;
+    }
 }

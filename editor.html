@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>edit your meme</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="initMem()">
+
+    <nav class="navigation">
+        <ul>
+            <li><a href="index.html">Gallery</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+    <section class="main-container flex">
+        <canvas class="canvas flex align-center" id="canvas" width="300" height="300"></canvas>
+        <section class="controls">
+
+
+            <!-- Text Position <button onclick="onChangeStartPos(this)">Top</button> -->
+
+            <label class="controls__label" for="name">Text Input</label>
+            <input class="controls__input" id="name" type="text" onchange="onChangeText()" placeholder="Enter Text" />
+
+            <span class="btn" onclick="onChangeFontSize(1)"> <img class="label"
+                    src="img/increase font - icon.png"></span>
+            <span class="btn" onclick="onChangeFontSize(-1)"> <img class="label"
+                    src="img/decrease font - icon.png"></span>
+
+            <span class="btn" onclick="onAddLine()"> <img class="label" src="img/add.png"></span>
+
+
+            <span class="btn" onclick="onChangePos('up')"> <img class="label" src="img/up.png"></span>
+            <span class="btn" onclick="onChangePos('down')" class="btn"> <img class="label" src="img/down.png"></span>
+
+            <label onchange="onEditTxtColor()" for="font-color">
+                <input type="color" id="font-color">
+                <span class="btn"><img src="img/paint-board.png" class="label" for="font-color" alt=""
+                        type="color"></span>
+            </label>
+
+
+            <label onchange="fillText(this.value)" for="txtStroke">
+                <input type="color" id="txtStroke" name="txtStroke">
+                <span class="btn"><img src="img/text-stroke.png" class="label" alt=""></span>
+            </label>
+
+
+            <select id="fontStyle" oninput="onEditTxtStyle(this.value)">
+
+                <option value="impact"> Impact </option>
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Geneva">Geneva</option>
+            </select>
+
+
+            <button class="btn">
+                <span class="btn" onclick="onDownloadMeme()"> <img class="label" src="img/download.png">
+                    <a id="download-link" href="" download="my_meme.jpg"></a>
+                </span>
+            </button>
+        </section>
+    </section>
+
+
+    <script src="js/utils.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/meme-service.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
