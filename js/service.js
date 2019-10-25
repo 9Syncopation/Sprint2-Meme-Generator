@@ -42,12 +42,12 @@ var gMeme = {
 function createImgs() {
     return [
         { id: 1, url: "img/1.jpg", keywords: ['crazy'] },
-        { id: 2, url: "img/2.jpg", keywords: ['dancing', 'nature'] },
+        { id: 2, url: "img/2.jpg", keywords: ['nature'] },
         { id: 3, url: "img/3.jpg", keywords: ['trump'] },
         { id: 4, url: "img/4.jpg", keywords: ['dogs'] },
         { id: 5, url: "img/5.jpg", keywords: ['baby'] },
         { id: 6, url: "img/6.jpg", keywords: ['cats'] },
-        { id: 7, url: "img/7.jpg", keywords: ['baby', 'dogs'] },
+        { id: 7, url: "img/7.jpg", keywords: ['dogs'] },
         { id: 8, url: "img/8.jpg", keywords: ['actor'] },
         { id: 9, url: "img/9.jpg", keywords: ['baby'] },
         { id: 10, url: "img/10.jpg", keywords: ['actor'] },
@@ -65,8 +65,6 @@ function getCurrImg() {
 function getImage(currId) {
     saveToStorage('image', currId)
     window.open("editor.html", "_self");
-
-
 }
 
 function createKeyWords() {
@@ -80,7 +78,6 @@ function createKeyWords() {
         'cats': 1,
         'actor': 2,
     }
-
 }
 
 function getKeyWords() {

@@ -4,16 +4,12 @@
 let gCurrTxt = 0
 
 
-// console.log('gmeme curent:', gMeme['txts'][0].line);
 
 function initMem() {
     gCanvas = document.querySelector('#canvas');
     gCtx = gCanvas.getContext('2d')
-    // let currId = getFromStorage('image')
     drawImgInCanvas()
-    // console.log(currId, 'currId');
-
-}
+   }
 
 function clearCanvas() {
     gCtx.clearRect(0, 0, gCanvas.width, gCanvas.height);
@@ -23,9 +19,6 @@ function getSelectedTxtIdx() {
     return gMeme.selectedTxtIdx;
 }
 
-
-// console.log('line meme',gMeme['txts'].line);
-
 function onChangeText() {
     let txt = document.getElementById('name').value
     changeText(txt)
@@ -33,19 +26,9 @@ function onChangeText() {
 }
 
 function changeText(txt) {
-    // debugger;
-    // let selectedTxtIdx = getSelctedTxtIdx();
     let currTxt = gCurrTxt
-    //  console.log('drawtxt',txt.color);
     gMeme.txts[currTxt].line = txt;
-    // // let txt = gMeme['txts'][0].line
-    // gCtx.fillStyle = txt.color;
-    // gCtx.textBaseline = 'middle';
-    // gCtx.txtStyle = txt.txtStyle
-    // gCtx.font = `100px impact`;
-    // gCtx.fillText(txt, 100, 100);
-
-}
+  }
 
 function onChangeFontSize(size) {
     changeFontSize(size);
@@ -56,7 +39,6 @@ function changeFontSize(size) {
     let diffSize;
     if (size === 1) diffSize = 1
     else diffSize = -1
-    // let selectedTxtIdx = getSelctedTxtIdx();
     let currTxt = gCurrTxt
     gMeme.txts[currTxt].size += diffSize;
 
@@ -98,19 +80,15 @@ function getMeme() {
 }
 
 function onAddLine(ev) {
-
-
     clearInput(ev)
     let txt = document.getElementById('.control_input').value
     addLine(txt)
     renderCanvas();
-
 }
 
 function clearInput() {
     let elTtx = document.querySelector('.controls__input');
     elTtx.value = '';
-
 }
 
 function onEditTxtColor() {
@@ -126,7 +104,6 @@ function editTxtColor(color) {
     console.log('color', color);
 
 }
-
 
 function onEditTxtStyle(ev) {
     editTxtStyle(ev);
